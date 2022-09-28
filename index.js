@@ -10,7 +10,7 @@ function addMovie (event) {
     movieList.appendChild(movie);
     const movieTitle = document.createElement(`span`);
     movieTitle.textContent = inputField.value;
-    addEventListener(`click`,crossOffMovie);
+    movieTitle.addEventListener(`click`,crossOffMovie);
     movie.appendChild(movieTitle);
     movieList.appendChild(movie);
     inputField.value = '';
@@ -36,7 +36,6 @@ function crossOffMovie (event) {
     } else {
         message.textContent = `Movie added back`;
     }
-
 }
 
 const movieform = document.querySelector(`form`);
